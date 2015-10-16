@@ -38,6 +38,7 @@ namespace ZebraDevWeb.Controllers
         }
 
         // PUT: api/Clients/5
+        [Authorize]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutClient(int id, Client client)
         {
@@ -72,6 +73,7 @@ namespace ZebraDevWeb.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
+        [Authorize]
         // POST: api/Clients
         [ResponseType(typeof(Client))]
         public IHttpActionResult PostClient(Client client)
@@ -86,7 +88,7 @@ namespace ZebraDevWeb.Controllers
 
             return CreatedAtRoute("DefaultApi", new { id = client.ClientID }, client);
         }
-
+        [Authorize]
         // DELETE: api/Clients/5
         [ResponseType(typeof(Client))]
         public IHttpActionResult DeleteClient(int id)
