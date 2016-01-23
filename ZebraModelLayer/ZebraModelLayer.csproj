@@ -49,14 +49,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Configuration\ClientConfiguration.cs" />
+    <Compile Include="DAL\CaseFileConfiguration.cs" />
+    <Compile Include="DAL\ClientConfiguration.cs" />
+    <Compile Include="DAL\CompanyDetailsConfiguration.cs" />
+    <Compile Include="DAL\DepartmentConfiguration.cs" />
+    <Compile Include="DAL\IndexAnnotaion.cs" />
+    <Compile Include="DAL\LeadProfessionalConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\CaseFile.cs" />
     <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\CompanyDetails.cs" />
+    <Compile Include="Model\Department.cs" />
     <Compile Include="Model\DevContext.cs" />
+    <Compile Include="Model\LeadProfessional.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repository\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
